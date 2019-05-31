@@ -11,7 +11,7 @@ func APIRoutes(r *mux.Router) {
 	api := r.PathPrefix("/api").Subrouter().StrictSlash(true)
 	api.HandleFunc("/", func(w http.ResponseWriter, _ *http.Request) {
 		w.WriteHeader(http.StatusOK)
-		utils.Respond(w, utils.Message(true, "api routes and functions goes here"))
+		utils.Respond(w, utils.Message(true, "Venom API routes is places in $ROOT/router/api.go"))
 		return
 	}).Methods("GET")
 
