@@ -2,13 +2,15 @@ package router
 
 import (
 	"github.com/gorilla/mux"
-	"projects/starter/controllers"
+	"projects/starter/handlers"
+	"projects/starter/middleware"
 )
 
 // WEBRoutes function for the web request only
 func WEBRoutes(r *mux.Router) {
 	web := r.PathPrefix("/").Subrouter().StrictSlash(true)
-	web.HandleFunc("/", controllers.HomeController().HomeHandler).Methods("GET")
+	web.HandleFunc("/", handlers.HomeHandlers().Index).Methods("GET")
+
 	// middleware
-	// web.Use(app.WebAuthentication)
+	web.Use(middleware.RequestPathLogger)
 }

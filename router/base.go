@@ -11,12 +11,11 @@ func New() *mux.Router {
 	router := mux.NewRouter().StrictSlash(true)
 	APIRoutes(router)
 	WEBRoutes(router)
-	return router
-}
 
-// NotFoundHandler function
-func NotFoundHandler(w http.ResponseWriter, _ *http.Request) {
-	w.WriteHeader(http.StatusNotFound)
-	utils.Respond(w, utils.Message(false, "This resources was not found on our server"))
-	return
+	// serve static files
+	router.PathPrefix("/static/").Handler(http.StripPrefix("/static/", http.FileServer(http.Dir("static/"))))
+
+	// 404 view
+	router.NotFoundHandler = http.HandlerFunc(utils.NotFoundHandler)
+	return router
 }

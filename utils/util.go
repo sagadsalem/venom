@@ -72,3 +72,9 @@ func FindAndParseTemplates(rootDir string) (*template.Template, error) {
 
 	return root, err
 }
+
+// NotFoundHandler function
+func NotFoundHandler(w http.ResponseWriter, _ *http.Request) {
+	Tpl.ExecuteTemplate(w, "404.html", nil)
+	return
+}

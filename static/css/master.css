@@ -1,0 +1,18 @@
+@font-face{
+	src:url("../font/OperatorMono-Medium.ttf");
+	font-family: "OperatorMono";
+}
+body{
+    background: #f3f3f3;
+	font-family: "OperatorMono"!important;
+}
+
+.error-wrapper {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+
