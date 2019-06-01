@@ -1,3 +1,5 @@
+![alt text](https://github.com/sagadsalem/venom/static/img/logo.png)
+
 # Venom
 
 it's a simple min Golang starter app done by using some packages with MVC structure :) highly inspired by Laravel
