@@ -1,4 +1,6 @@
+<p align="center">
 <img src="https://github.com/sagadsalem/venom/blob/master/static/img/logo.png" align="center" width="200" >
+</p>
 
 
 # Venom
