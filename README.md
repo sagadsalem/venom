@@ -1,4 +1,4 @@
-![alt text](https://github.com/sagadsalem/venom/blob/master/static/img/logo.png =100x20)
+![alt text](https://github.com/sagadsalem/venom/blob/master/static/img/logo.png=100x20)
 
 # Venom
 
