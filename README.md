@@ -1,4 +1,5 @@
-![](https://github.com/sagadsalem/venom/blob/master/static/img/logo.png){:height="200px" width="200px"}.
+<img src="https://github.com/sagadsalem/venom/blob/master/static/img/logo.png" align="center" width="200" >
+
 
 # Venom
 
