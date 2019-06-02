@@ -23,6 +23,17 @@ Or using [GoModules](https://blog.golang.org/using-go-modules).
  go run main.go
 ```
 
+## Thanks
+
+Thanks for all these packages for all awesome work they do
+
+[gorilla/mux](github.com/gorilla/mux)
+
+[jinzhu/gorm](github.com/jinzhu/gorm)
+
+[joho/godotenv](github.com/joho/godotenv)
+
+[joho/godotenv](github.com/unrolled/render)
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
