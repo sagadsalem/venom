@@ -7,7 +7,7 @@ import (
 )
 
 // WEBRoutes function for the web request only
-func WEBRoutes(r *mux.Router) {
+func ServeWEBRoutes(r *mux.Router) {
 	web := r.PathPrefix("/").Subrouter().StrictSlash(true)
 	web.HandleFunc("/", handlers.HomeHandlers().Index).Methods("GET")
 

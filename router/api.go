@@ -7,7 +7,7 @@ import (
 )
 
 // APIRoutes function for the api request only
-func APIRoutes(r *mux.Router) {
+func ServeAPIRoutes(r *mux.Router) {
 	api := r.PathPrefix("/api").Subrouter().StrictSlash(true)
 	api.HandleFunc("/", func(w http.ResponseWriter, _ *http.Request) {
 		if err := renderer.JSON(w, http.StatusOK,
