@@ -3,16 +3,17 @@ package router
 import (
 	"github.com/gorilla/mux"
 	"net/http"
-	"projects/starter/utils"
+	"projects/starter/renderer"
 )
 
 // APIRoutes function for the api request only
 func APIRoutes(r *mux.Router) {
 	api := r.PathPrefix("/api").Subrouter().StrictSlash(true)
 	api.HandleFunc("/", func(w http.ResponseWriter, _ *http.Request) {
-		w.WriteHeader(http.StatusOK)
-		utils.Respond(w, utils.Message(true, "Venom API routes is places in $ROOT/router/api.go"))
-		return
+		if err := renderer.JSON(w, http.StatusOK,
+			map[string]interface{}{"message": "Venom API routes is places in $ROOT/router/api.go"}); err != nil {
+			panic(err.Error())
+		}
 	}).Methods("GET")
 
 	// middleware

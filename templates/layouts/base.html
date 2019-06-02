@@ -1,0 +1,26 @@
+<!-- templates/layouts/base.html -->
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/css/master.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="/static/img/favicon.png">
+    <title>{{ appName }}</title>
+    {{ partial "css" }}
+</head>
+<body>
+<!-- render the partial template called `header-$current_template` here -->
+{{ partial "header" }}
+
+<!-- Render the current template here -->
+<div class="container">
+    {{ yield }}
+</div>
+<!-- render the partial template called `footer-$current_template` here -->
+{{ partial "footer" }}
+</body>
+</html>
