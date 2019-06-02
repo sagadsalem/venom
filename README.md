@@ -33,7 +33,7 @@ Thanks for all these packages for all awesome work they do
 
 [joho/godotenv](github.com/joho/godotenv)
 
-[joho/godotenv](github.com/unrolled/render)
+[unrolled/render](github.com/unrolled/render)
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
