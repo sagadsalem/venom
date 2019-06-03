@@ -11,9 +11,14 @@ var (
 	Rnd *render.Render
 )
 
+const (
+	TEMPLATES = "templates"
+	LAYOUT    = "layouts/base"
+)
+
 func init() {
 	//init the renderer
-	Rnd = NewRenderer("templates", "layouts/base", Development())
+	Rnd = NewRenderer(TEMPLATES, LAYOUT, Development())
 }
 
 // NewRenderer instance
@@ -37,8 +42,8 @@ func Development() bool {
 }
 
 // HTML RESPONSE
-func HTML(w io.Writer, status int, name string, binding interface{}) error {
-	if err := Rnd.HTML(w, status, name, binding); err != nil {
+func HTML(w io.Writer, status int, name string, binding interface{}, options ...render.HTMLOptions) error {
+	if err := Rnd.HTML(w, status, name, binding, prepareHTMLOptions(options)); err != nil {
 		return err
 	}
 	return nil
@@ -50,4 +55,15 @@ func JSON(w io.Writer, status int, v interface{}) error {
 		return err
 	}
 	return nil
+}
+
+// prepareHTMLOptions
+func prepareHTMLOptions(options []render.HTMLOptions) render.HTMLOptions {
+	if len(options) > 0 {
+		return render.HTMLOptions{
+			Layout: options[0].Layout,
+		}
+	}
+
+	return render.HTMLOptions{Layout: LAYOUT}
 }
