@@ -6,7 +6,7 @@ style="border: 1px double #e6e1e1" align="center" width="200" >
 
 # Venom
 
-it's a simple min Golang starter app done by using some packages with MVC structure :) highly inspired by Laravel
+it's a simple mini Golang starter app done by using some packages with MVC structure :) highly inspired by Laravel
 
 ## Installation
 
