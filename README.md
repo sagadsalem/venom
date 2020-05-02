@@ -1,5 +1,5 @@
 <p align="center">
-<img src="https://github.com/sagadsalem/venom/blob/master/static/img/logo.png"
+<img width="200px" src="https://github.com/sagadsalem/venom/blob/master/static/img/logo.png"
 style="border: 1px double #e6e1e1" align="center" width="200" >
 </p>
 
